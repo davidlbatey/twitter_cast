@@ -1,0 +1,15 @@
+= stylesheet_link_tag "impress"
+
+%h1#title @hubwestminster
+%h2#streams= "Tweet: #{Stream.pluck(:hashtag)}"
+%h2#author by @DavidBatey
+
+#impress.impress-not-supported
+
+  - @tweets.each do |tweet|
+    .step.slide{data:{x: "#{Kernel.rand(8000)}", y:"#{Kernel.rand(6000)}", z:"#{Kernel.rand(30) + 80}"}}
+      =tweet
+
+= javascript_include_tag "impress"
+:javascript
+  impress();
