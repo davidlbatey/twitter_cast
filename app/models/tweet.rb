@@ -1,23 +1,14 @@
 class Tweet < ActiveRecord::Base
 
-
-  def self.all
-    collect_tweets
-  end
-
-  private
-
-  def self.collect_tweets
+  def self.from_streams
     tweets = []
-
     streams = Stream.all
+    
     streams.each do |stream|
-      stream_tweets = Twitter.search(stream.hashtag, :rpp => 10) 
-      puts stream_tweets
-      tweets << stream_tweets.collect(&:text) if stream_tweets
+      tweets << Twitter.search(stream.hashtag, :rpp => 10)  
     end
 
-    tweets.flatten.compact.reject(&:blank?)
+    tweets.flatten.compact
   end
 
 end
