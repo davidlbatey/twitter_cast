@@ -5,9 +5,16 @@
 
 Tweet =
 
+  page_refresh: 120000
+  slide_delay: 6000
+
+  init: ->
+    setTimeout((->window.location.reload()), @page_refresh)
+    setInterval(Tweet.next, @slide_delay)
+
   next: ->
     impress().next()
 
 $ ->
-  setInterval(Tweet.next, 6000)
+  Tweet.init()
   impress()
