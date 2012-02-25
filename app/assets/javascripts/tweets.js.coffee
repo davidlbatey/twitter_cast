@@ -10,3 +10,4 @@ Tweet =
 
 $ ->
   setInterval(Tweet.next, 6000)
+  impress()
