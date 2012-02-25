@@ -1,5 +1,4 @@
-class Tweet < ActiveRecord::Base
-
+class Tweet
   def self.from_streams
     tweets = []
     streams = Stream.all
@@ -10,5 +9,4 @@ class Tweet < ActiveRecord::Base
 
     tweets.flatten.compact
   end
-
 end
