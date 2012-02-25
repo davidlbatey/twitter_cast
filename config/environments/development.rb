@@ -34,4 +34,7 @@ WatchTower::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Reduced log level since this wont be a production app
+  config.log_level = :warn
 end
