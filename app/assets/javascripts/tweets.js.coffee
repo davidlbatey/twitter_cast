@@ -5,7 +5,7 @@
 
 Tweet =
 
-  page_refresh: 120000
+  page_refresh: 180000
   slide_delay: 6000
 
   init: ->
