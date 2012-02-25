@@ -9,7 +9,7 @@ You can see a demo at: http://youtu.be/AZ_iBGLtqfI
 ## Todo
 
 - Use websockets to update the content (at the moment it will refresh after 3 mins)
-- Allow users to collate users or lists of tweets instead of just a general twitter search
+- Allow app to collate users or lists of tweets instead of just a general twitter search
 - Add security to the app
 - Add functional and integration tests
 - Add more transitions on the front end
