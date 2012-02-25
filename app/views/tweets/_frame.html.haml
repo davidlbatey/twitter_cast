@@ -1,4 +1,4 @@
 = stylesheet_link_tag "impress"
-%h1#title @hubwestminster
+%h1#title= AppConfig.handle
 %h2#streams= "Tweet: #{Stream.pluck(:hashtag)}"
 %h2#author by @DavidBatey
